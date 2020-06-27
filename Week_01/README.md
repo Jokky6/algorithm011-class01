@@ -9,7 +9,7 @@
 
 `list`可以理解成一个动态数组,每次内存不足时,都会自动扩容,扩容大小是原来2倍。
 
-由于这一部分的实现实现涉及C语言,不做过多阐述,有兴趣点击[CPython源码](https://github.com/python/cpython/blob/master/Objects/listobject.c )。
+由于这一部分的实现涉及C语言,不做过多阐述,有兴趣点击[CPython源码](https://github.com/python/cpython/blob/master/Objects/listobject.c )。
 
 时间复杂度:
 
