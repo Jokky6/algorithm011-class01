@@ -17,16 +17,16 @@ import itertools
 from typing import List
 
 
-# class Solution(object):
-#     def permute(self, nums: List[int]) -> List[List[int]]:
-#         if len(nums)==1:return [nums]
-#         res = []
-#         for i, num in enumerate(nums):
-#             rest = nums[:i] + nums[i + 1:]
-#             for rest_num in self.permute(rest):
-#                 res.append([num] + rest_num)
-#         return res
-
 class Solution(object):
     def permute(self, nums: List[int]) -> List[List[int]]:
-        return list(itertools.permutations(nums))
+        if len(nums)==1:return [nums]
+        res = []
+        for i, num in enumerate(nums):
+            rest = nums[:i] + nums[i + 1:]
+            for rest_num in self.permute(rest):
+                res.append([num] + rest_num)
+        return res
+
+# class Solution(object):
+#     def permute(self, nums: List[int]) -> List[List[int]]:
+#         return list(itertools.permutations(nums))
